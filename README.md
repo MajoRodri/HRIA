@@ -224,9 +224,6 @@ Crear itinerarios específicos por industria.
 <p align="center">
   <img src="charts_phase4/viz5_scatter_vistas_solicitudes.png" width="900">
 </p>
-<p align="center">
-  <img src="charts_phase4/viz5_scatter_vistas_solicitudes.png" width="900">
-</p>
 
 <p align="center">
   <em>Figura 7. Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
