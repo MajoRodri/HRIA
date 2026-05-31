@@ -4,6 +4,18 @@
 
 # HRIA — HR Intelligence & Bias Analysis
 
+## Índice
+
+- Resumen Ejecutivo
+- Problema de Negocio
+- Dataset Utilizado
+- Metodología
+- Hallazgos Clave
+- Sesgos y Limitaciones
+- Recomendaciones
+- Reproducibilidad
+- Equipo
+
 ## Resumen Ejecutivo
 
 HRIA (HR Intelligence & Bias Analysis) es un proyecto de análisis exploratorio de datos (EDA) desarrollado para DataTalent Solutions con el objetivo de diseñar programas de reskilling basados en evidencia y orientar a candidatos hacia las oportunidades más reales del mercado laboral de datos.
@@ -142,6 +154,15 @@ Diseñar programas de entrada orientados a Data Analyst y utilizarlo como primer
   <em>Figura 2. Comparativa salarial entre Data Analyst, Data Engineer y Data Scientist.</em>
 </p>
 
+<p align="center">
+  <img src="charts_phase4/viz8_salario_por_experiencia.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figura 2.1 Progresión salarial según experiencia.</em>
+</p>
+
+
 ### El mayor salto salarial ocurre entre Entry y Mid-Senior
 
 El incremento salarial estimado supera los 35.000 dólares anuales.
@@ -202,6 +223,14 @@ Construir el currículo sobre:
 
 ## ¿Qué industrias contratar?
 
+<p align="center">
+  <img src="charts_phase4/viz3_skills_global_vs_spain.png" width="900">
+</p>
+
+<p align="center">
+  <em>Figura 4. Distribución de oportunidades por industria.</em>
+</p>
+
 Aunque IT Services lidera el volumen de contratación, existen oportunidades relevantes en:
 
 * Healthcare
@@ -226,7 +255,7 @@ Crear itinerarios específicos por industria.
 </p>
 
 <p align="center">
-  <em>Figura 7. Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
+  <em>Figura 5. Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
 </p>
 Solo el 39% de las ofertas muestran solicitudes reales.
 
@@ -257,7 +286,7 @@ El análisis identifica ocho sesgos principales.
 </p>
 
 <p align="center">
-  <em>Figura 5. Principales sesgos detectados en el dataset.</em>
+  <em>Figura 6. Principales sesgos detectados en el dataset.</em>
 </p>
 
 ## 1. Sesgo MNAR Salarial
@@ -304,13 +333,133 @@ Su identificación permite interpretar correctamente los resultados y evitar dec
 
 # Recomendaciones
 
-1. Priorizar Data Analyst como puerta de entrada.
-2. Diseñar itinerarios progresivos hacia Engineer y Scientist.
-3. Construir el currículo sobre Cloud, Python, Git y tecnologías cloud.
-4. Incorporar módulos de negocio y comunicación.
-5. Crear especializaciones sectoriales.
-6. Utilizar métricas de competitividad basadas en vistas.
-7. Complementar el análisis con fuentes específicas del mercado español.
+# Recomendaciones Estratégicas
+
+## 1. Priorizar Data Analyst como puerta de entrada
+
+Los resultados muestran que Data Analyst es el rol con mayor accesibilidad para perfiles junior, ofreciendo una combinación equilibrada entre oportunidades de contratación y potencial salarial.
+
+### Acción propuesta
+
+Diseñar el itinerario inicial del programa orientado a Data Analyst, maximizando la empleabilidad de los alumnos durante sus primeros meses de búsqueda laboral.
+
+### Beneficio esperado
+
+Mayor tasa de inserción laboral y reducción del tiempo necesario para acceder al primer empleo en el sector de datos.
+
+---
+
+## 2. Diseñar itinerarios progresivos hacia Data Engineer y Data Scientist
+
+Aunque Data Analyst representa la mejor puerta de entrada, los roles de Data Engineer y Data Scientist presentan salarios superiores y mayores oportunidades de especialización.
+
+### Acción propuesta
+
+Crear rutas formativas escalonadas:
+
+Data Analyst → Data Engineer → Data Scientist
+
+permitiendo que los alumnos continúen desarrollando sus competencias una vez obtengan experiencia profesional.
+
+### Beneficio esperado
+
+Mayor crecimiento salarial a medio plazo y mejora de la retención de alumnos mediante formación continua.
+
+---
+
+## 3. Construir el currículo sobre Cloud, Python y tecnologías cloud
+
+La validación realizada con fuentes españolas confirma que Cloud Computing, Python, Azure, AWS y Git se encuentran entre las habilidades más demandadas por las empresas.
+
+### Acción propuesta
+
+Actualizar el contenido formativo priorizando:
+
+* Python
+* Git y control de versiones
+* Cloud Computing
+* Azure
+* AWS
+* Docker
+* Buenas prácticas de desarrollo
+
+### Beneficio esperado
+
+Mayor alineación entre la formación impartida y las necesidades reales del mercado laboral.
+
+---
+
+## 4. Incorporar módulos de negocio y comunicación
+
+Las organizaciones no buscan únicamente perfiles técnicos. Los profesionales de datos deben ser capaces de comunicar resultados, interpretar necesidades de negocio y apoyar la toma de decisiones.
+
+### Acción propuesta
+
+Incluir formación en:
+
+* Storytelling con datos
+* Presentaciones ejecutivas
+* Comunicación de insights
+* Pensamiento analítico orientado al negocio
+
+### Beneficio esperado
+
+Profesionales más completos y con mayor capacidad para generar impacto dentro de las organizaciones.
+
+---
+
+## 5. Crear especializaciones sectoriales
+
+El análisis muestra oportunidades relevantes en sectores como Healthcare, Finance, Manufacturing y Defense, además del sector tecnológico.
+
+### Acción propuesta
+
+Desarrollar módulos optativos o itinerarios especializados por industria.
+
+Ejemplos:
+
+* Data Analytics para Healthcare
+* Data Analytics para Finanzas
+* Business Intelligence Industrial
+
+### Beneficio esperado
+
+Diferenciación competitiva frente a otros programas formativos y mejor adaptación a distintos perfiles de alumnos.
+
+---
+
+## 6. Utilizar métricas de competitividad basadas en visualizaciones
+
+La correlación observada entre visualizaciones y solicitudes permite utilizar las visualizaciones como indicador indirecto de competencia cuando no existen datos completos de aplicaciones.
+
+### Acción propuesta
+
+Incorporar indicadores de competitividad en futuros análisis y herramientas de orientación laboral.
+
+### Beneficio esperado
+
+Mejor comprensión del nivel de competencia existente en cada tipo de oferta y apoyo más efectivo a los candidatos durante su búsqueda de empleo.
+
+---
+
+## 7. Complementar el análisis con fuentes específicas del mercado español
+
+El dataset principal presenta un fuerte sesgo geográfico hacia Estados Unidos. Aunque se realizó una validación complementaria, futuras decisiones deberían apoyarse en más fuentes locales.
+
+### Acción propuesta
+
+Integrar periódicamente información procedente de:
+
+* InfoJobs
+* Tecnoempleo
+* TicJob
+* Fundación Telefónica
+* Observatorios de empleo tecnológico
+
+### Beneficio esperado
+
+Mayor precisión en la identificación de tendencias y una mejor adaptación de los programas a la realidad del mercado español.
+omplementar el análisis con fuentes específicas del mercado español.
 
 ---
 
@@ -318,14 +467,125 @@ Su identificación permite interpretar correctamente los resultados y evitar dec
 
 Este proyecto ha sido desarrollado de forma colaborativa siguiendo una metodología ágil, combinando análisis de datos, visualización, investigación de mercado y validación de resultados.
 
-| Rol | Miembro |
-|------|----------|
+| Miembro | Rol |
 
-| Data Analyst & Developer | [MajoRodri](https://github.com/MajoRodri) |
-| Data Analyst & Developer | [MariaIsaDurango](https://github.com/MariaIsaDurango) |
-| Data Analyst & Developer | [SiR0N](https://github.com/SiR0N) |
-| Data Analyst & Developer - SM | [JCRbit](https://github.com/JCRbit) |
-| Data Analyst & Developer - PO | [adryeli](https://github.com/adryeli) |
+
+| Miembro | Rol |
+|----------|----------|
+| [MajoRodri](https://github.com/MajoRodri) | Data Analyst & Developer |
+| [MariaIsaDurango](https://github.com/MariaIsaDurango) | Data Analyst & Developer |
+| [SiR0N](https://github.com/SiR0N) | Data Analyst & Developer |
+| [JCRbit](https://github.com/JCRbit) | Scrum Master & Developer |
+| [adryeli](https://github.com/adryeli) | Product Owner & Developer |
+
+## Principio de Reproducibilidad
+
+Uno de los principios fundamentales de la ciencia de datos es la reproducibilidad.
+
+Todos los resultados, gráficos y conclusiones presentados en este proyecto pueden regenerarse a partir de los datos y el código incluidos en este repositorio.
+
+
+# Reproducibilidad
+
+## Requisitos
+
+- Python 3.12+
+- Git
+- Jupyter, VsCode o Google Colab (Notebook)
+
+
+---
+
+## Clonar el repositorio
+
+```bash
+git clone https://github.com/MajoRodri/HRIA.git
+cd HRIA
+```
+
+---
+
+## Crear un entorno virtual
+
+### Windows
+
+```bash
+python -m venv venv
+venv\Scripts\activate
+```
+
+### Linux / macOS
+
+```bash
+python -m venv venv
+source venv/bin/activate
+```
+
+---
+
+## Instalar dependencias
+
+```bash
+pip install -r requirements.txt
+```
+
+
+---
+
+## Ejecutar los notebooks
+
+Abrir Jupyter Notebook (o VsCode/Google Colab):
+
+```bash
+jupyter notebook
+```
+
+o
+
+```bash
+jupyter lab
+```
+
+Los notebooks contienen:
+
+- Exploración inicial de datos (Phase 1)
+- Limpieza y transformación (Phase 2)
+- Análisis exploratorio (EDA) (Phase 3)
+- Evaluación de sesgos (Phase 3.1)
+- Visualizaciones (Phase 4)
+
+
+---
+
+## Ejecutar el Dashboard
+
+Para lanzar el dashboard interactivo:
+
+```bash
+streamlit run app.py
+```
+
+Una vez iniciado, el dashboard estará disponible en:
+
+```text
+http://localhost:8501
+```
+
+---
+
+## Consideraciones
+
+- Algunos resultados dependen de fuentes externas que pueden actualizarse con el tiempo.
+- Los análisis reproducen el estado de los datos utilizados durante el desarrollo del proyecto.
+- Las conclusiones deben interpretarse teniendo en cuenta los sesgos y limitaciones documentados en este informe.
+
+---
+
+## Licencia
+
+Proyecto desarrollado con fines educativos y académicos.
+
+Los datasets utilizados mantienen las condiciones de uso establecidas por sus respectivos propietarios.
 
 **HRIA — HR Intelligence & Bias Analysis**
 
