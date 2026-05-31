@@ -1,6 +1,7 @@
 <p align="center">
   <img src="logo_hria.png" width="300">
 </p>
+
 # HRIA — HR Intelligence & Bias Analysis
 
 ## Resumen Ejecutivo
@@ -113,6 +114,7 @@ El proyecto siguió un flujo completo de análisis exploratorio de datos (EDA).
 <p align="center">
   <em>Figura 1. Accesibilidad de los principales roles de datos para perfiles junior.</em>
 </p>
+
 ### Data Analyst es la mejor puerta de entrada
 
 El 38,5% de las ofertas para Data Analyst son accesibles para perfiles junior, frente al 22% para Data Scientist y el 18% para Data Engineer.
@@ -222,7 +224,13 @@ Crear itinerarios específicos por industria.
 <p align="center">
   <img src="charts_phase4/viz5_scatter_vistas_solicitudes.png" width="900">
 </p>
+<p align="center">
+  <img src="charts_phase4/viz5_scatter_vistas_solicitudes.png" width="900">
+</p>
 
+<p align="center">
+  <em>Figura 7. Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
+</p>
 Solo el 39% de las ofertas muestran solicitudes reales.
 
 Sin embargo, la correlación entre vistas y solicitudes alcanza:
@@ -311,7 +319,16 @@ Su identificación permite interpretar correctamente los resultados y evitar dec
 
 # Equipo
 
-Proyecto desarrollado por el equipo HRIA para DataTalent Solutions.
+Este proyecto ha sido desarrollado de forma colaborativa siguiendo una metodología ágil, combinando análisis de datos, visualización, investigación de mercado y validación de resultados.
+
+| Rol | Miembro |
+|------|----------|
+
+| Data Analyst & Developer | [MajoRodri](https://github.com/MajoRodri) |
+| Data Analyst & Developer | [MariaIsaDurango](https://github.com/MariaIsaDurango) |
+| Data Analyst & Developer | [SiR0N](https://github.com/SiR0N) |
+| Data Analyst & Developer - SM | [JCRbit](https://github.com/JCRbit) |
+| Data Analyst & Developer - PO | [adryeli](https://github.com/adryeli) |
 
 **HRIA — HR Intelligence & Bias Analysis**
 
