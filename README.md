@@ -331,8 +331,6 @@ Su identificación permite interpretar correctamente los resultados y evitar dec
 
 ---
 
-# Recomendaciones
-
 # Recomendaciones Estratégicas
 
 ## 1. Priorizar Data Analyst como puerta de entrada
@@ -529,7 +527,6 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-
 ---
 
 ## Ejecutar los notebooks
@@ -554,24 +551,6 @@ Los notebooks contienen:
 - Evaluación de sesgos (Phase 3.1)
 - Visualizaciones (Phase 4)
 
-
----
-
-## Ejecutar el Dashboard
-
-Para lanzar el dashboard interactivo:
-
-```bash
-streamlit run app.py
-```
-
-Una vez iniciado, el dashboard estará disponible en:
-
-```text
-http://localhost:8501
-```
-
----
 
 ## Consideraciones
 
