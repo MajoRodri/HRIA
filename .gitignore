@@ -1,3 +1,11 @@
+# === DATA ===
+data/raw/
+data/processed/
+data/external/
+
+# === NOTEBOOK CHECKPOINTS ===
+**/.ipynb_checkpoints/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[codz]
