@@ -25,11 +25,11 @@ Aplicación interactiva: [github.com/adryeli/hria_streamlit](https://github.com/
 - [Dataset Utilizado](#dataset-utilizado)
 - [Estructura del Proyecto](#estructura-del-proyecto)
 - [Metodología](#metodología)
-- [Hallazgos Clave](#hallazgos-clave)
-- [Sesgos y Limitaciones](#sesgos-y-limitaciones)
-- [Recomendaciones Estratégicas](#recomendaciones-estratégicas)
-- [Instalación](#instalación)
-- [Equipo](#equipo)
+- [💡 Hallazgos Clave](#hallazgos-clave)
+- [⚠️ Sesgos y Limitaciones](#sesgos-y-limitaciones)
+- [🎯 Recomendaciones Estratégicas](#recomendaciones-estratégicas)
+- [🛠️ Instalación](#instalación)
+- [👥 Equipo](#equipo)
 
 ---
 
@@ -179,7 +179,7 @@ HRIA/
 
 ---
 
-## 💡 Hallazgos Clave
+## Hallazgos Clave
 
 ### ¿Qué rol priorizar?
 
@@ -351,7 +351,7 @@ Solo el 39% de las ofertas muestran solicitudes reales. Sin embargo, la correlac
 
 ---
 
-## ⚠️ Sesgos y Limitaciones
+## Sesgos y Limitaciones
 
 <details>
 <summary>Ver los 8 sesgos identificados</summary>
@@ -406,7 +406,7 @@ Los sesgos no invalidan el análisis. Su identificación permite interpretar cor
 
 ---
 
-## 🎯 Recomendaciones Estratégicas
+## Recomendaciones Estratégicas
 
 <details>
 <summary>1. Priorizar Data Analyst como puerta de entrada</summary>
@@ -516,7 +516,7 @@ El dataset principal presenta un fuerte sesgo geográfico hacia Estados Unidos. 
 
 ---
 
-## 🛠️ Instalación
+## Instalación
 
 Todos los resultados, gráficos y conclusiones presentados en este proyecto pueden regenerarse a partir de los datos y el código incluidos en este repositorio.
 
@@ -605,7 +605,7 @@ jupyter lab
 
 ---
 
-## 👥 Equipo
+## Equipo
 
 Este proyecto ha sido desarrollado de forma colaborativa siguiendo una metodología ágil, combinando análisis de datos, visualización, investigación de mercado y validación de resultados.
 
