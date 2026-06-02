@@ -16,6 +16,8 @@ Analizamos **19.725 ofertas de empleo** del mercado de datos y tecnología, comp
 
 Aplicación interactiva: [github.com/adryeli/hria_streamlit](https://github.com/adryeli/hria_streamlit)
 
+Informe de sesgos interactivo (Plotly): [Phase 3.1 — Bias Report](https://majorodri.github.io/HRIA/notebooks/Phase3_1_Bias_Report.html)
+
 ---
 
 ## Índice
