@@ -1,26 +1,43 @@
 <p align="center">
-  <img src="logo_hria.png" width="300">
+  <img src="docs/assets/logos/logo_hria.png" width="300">
 </p>
 
 # HRIA — HR Intelligence & Bias Analysis
 
+HRIA es un proyecto de análisis exploratorio de datos (EDA) desarrollado para **DataTalent Solutions**. Su objetivo es diseñar programas de reskilling basados en evidencia y orientar a candidatos hacia las oportunidades más reales del mercado laboral de datos.
+
+Analizamos **19.725 ofertas de empleo** del mercado de datos y tecnología, complementadas con fuentes del mercado español, para responder preguntas estratégicas: qué roles priorizar, qué habilidades enseñar, qué salario esperar y cuál es el retorno de invertir en formación.
+
+---
+
+## 🎬 Demo
+
+[![Ver presentación en YouTube](https://img.youtube.com/vi/570OBE56TkA/0.jpg)](https://youtu.be/570OBE56TkA?si=0yoKYaZ46YlkC2RI)
+
+Aplicación interactiva: [github.com/adryeli/hria_streamlit](https://github.com/adryeli/hria_streamlit)
+
+---
+
 ## Índice
 
-- Resumen Ejecutivo
-- Problema de Negocio
-- Dataset Utilizado
-- Metodología
-- Hallazgos Clave
-- Sesgos y Limitaciones
-- Recomendaciones
-- Reproducibilidad
-- Equipo
+- [Resumen Ejecutivo](#resumen-ejecutivo)
+- [Problema de Negocio](#problema-de-negocio)
+- [Dataset Utilizado](#dataset-utilizado)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Metodología](#metodología)
+- [Hallazgos Clave](#hallazgos-clave)
+- [Sesgos y Limitaciones](#sesgos-y-limitaciones)
+- [Recomendaciones Estratégicas](#recomendaciones-estratégicas)
+- [Instalación](#instalación)
+- [Equipo](#equipo)
+
+---
 
 ## Resumen Ejecutivo
 
-HRIA (HR Intelligence & Bias Analysis) es un proyecto de análisis exploratorio de datos (EDA) desarrollado para DataTalent Solutions con el objetivo de diseñar programas de reskilling basados en evidencia y orientar a candidatos hacia las oportunidades más reales del mercado laboral de datos.
+HRIA (HR Intelligence & Bias Analysis) es un proyecto de análisis exploratorio de datos desarrollado para DataTalent Solutions con el objetivo de diseñar programas de reskilling basados en evidencia y orientar a candidatos hacia las oportunidades más reales del mercado laboral de datos.
 
-A partir del análisis de **19.725 ofertas de empleo** y fuentes complementarias del mercado español, identificamos qué perfiles ofrecen una mayor probabilidad de inserción laboral, qué habilidades son más demandadas, qué sectores generan más oportunidades y cuál es el retorno económico potencial de una transición profesional hacia los roles de datos.
+A partir del análisis de **19.725 ofertas de empleo** y fuentes complementarias del mercado español, identificamos qué perfiles ofrecen mayor probabilidad de inserción laboral, qué habilidades son más demandadas, qué sectores generan más oportunidades y cuál es el retorno económico potencial de una transición profesional hacia los roles de datos.
 
 ### Hallazgos principales
 
@@ -32,7 +49,7 @@ A partir del análisis de **19.725 ofertas de empleo** y fuentes complementarias
 
 ---
 
-# Problema de Negocio
+## Problema de Negocio
 
 DataTalent Solutions necesitaba responder una pregunta estratégica:
 
@@ -48,7 +65,10 @@ Para ello era necesario comprender:
 
 ---
 
-# Dataset Utilizado
+## Dataset Utilizado
+
+<details>
+<summary>Ver fuentes y periodo analizado</summary>
 
 ### Dataset principal
 
@@ -67,34 +87,79 @@ Para ello era necesario comprender:
 
 Para validar los resultados en el contexto español se incorporaron:
 
-* Fundación Telefónica / OrientaHub (Infojobs, Tecnoempleo,etc)
+* Fundación Telefónica / OrientaHub (Infojobs, Tecnoempleo, etc)
 
-Periodo analizado:
+### Periodo analizado
 
 * LinkedIn Jobs 2024
 * Mercado español: diciembre 2025 – abril 2026
 
+</details>
+
 ---
 
-# Metodología
+## Estructura del Proyecto
 
-El proyecto siguió un flujo completo de análisis exploratorio de datos (EDA).
+<details>
+<summary>Ver estructura de carpetas y archivos</summary>
 
-## 1. Exploración
+```
+HRIA/
+├── notebooks/
+│   ├── Phase1_Initial_Exploration.ipynb
+│   ├── Phase2_Data_Cleaning_Preparation.ipynb
+│   ├── Phase3_Statistical_Bias_Analysis.ipynb
+│   ├── Phase3_1_Bias_Report.ipynb
+│   └── Phase4_Visualization.ipynb
+├── charts/
+│   ├── viz1.1_distribucion_salario.png
+│   ├── viz1.2_qq_plots_escala_real.png
+│   ├── viz2_boxplot_experiencia.png
+│   ├── viz3_business_units_global_vs_spain.png
+│   ├── viz4.1_hard_skills_global_vs_spain.png
+│   ├── viz4.2_most_demanded_skills_per_role.png
+│   ├── viz5_top_industrias.png
+│   ├── viz6_scatter_vistas_solicitudes.png
+│   ├── viz7_heatmap_correlaciones.png
+│   ├── viz8_tipo_contrato.png
+│   ├── viz9_salario_por_experiencia.png
+│   ├── viz10_salario_por_rol.png
+│   ├── viz11_accesibilidad_vs_salario.png
+│   ├── viz12_roi_reskilling.png
+│   └── viz_intro_sesgo.png
+├── docs/
+│   └── assets/
+│       ├── logos/
+│       │   └── logo_hria.png
+│       └── skills_logos/
+├── requirements.txt
+└── README.md
+```
+
+</details>
+
+---
+
+## Metodología
+
+<details>
+<summary>Ver fases del análisis</summary>
+
+### 1. Exploración
 
 * Inspección de variables
 * Identificación de tipos de datos
 * Análisis descriptivo
 * Evaluación de valores nulos
 
-## 2. Limpieza
+### 2. Limpieza
 
 * Tratamiento de registros incompletos
 * Normalización de categorías
 * Validación de consistencia
 * Revisión de outliers
 
-## 3. Análisis
+### 3. Análisis
 
 * Estadística descriptiva
 * Comparaciones entre grupos
@@ -103,95 +168,116 @@ El proyecto siguió un flujo completo de análisis exploratorio de datos (EDA).
 * Segmentación por industria
 * Evaluación de competitividad
 
-## 4. Sesgos
+### 4. Sesgos
 
 * Identificación de sesgos de selección
 * Evaluación de datos faltantes
 * Limitaciones geográficas
 * Riesgos para la toma de decisiones
 
----
-
-# Hallazgos Clave
-
-## ¿Qué rol priorizar?
-
-<!-- FASE 4 - VISUALIZACIÓN 10 -->
-<!-- Accesibilidad Junior vs Salario -->
-
-<p align="center">
-  <img src="charts_phase4/viz10_accesibilidad_vs_salario.png" width="900">
-</p>
-
-<p align="center">
-  <em>Figura 1. Accesibilidad de los principales roles de datos para perfiles junior.</em>
-</p>
-
-### Data Analyst es la mejor puerta de entrada
-
-El 38,5% de las ofertas para Data Analyst son accesibles para perfiles junior, frente al 22% para Data Scientist y el 18% para Data Engineer.
-
-### Implicación
-
-La primera colocación es significativamente más probable comenzando por Data Analyst.
-
-### Recomendación
-
-Diseñar programas de entrada orientados a Data Analyst y utilizarlo como primer escalón profesional.
+</details>
 
 ---
 
-## ¿Qué salario esperar?
+## 💡 Hallazgos Clave
 
-<!-- FASE 4 - VISUALIZACIÓN 9 -->
-<!-- Salario mediano por rol -->
+### ¿Qué rol priorizar?
 
 <p align="center">
-  <img src="charts_phase4/viz9_salario_por_rol.png" width="900">
+  <img src="charts/viz11_accesibilidad_vs_salario.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 2. Comparativa salarial entre Data Analyst, Data Engineer y Data Scientist.</em>
+  <em>Accesibilidad de los principales roles de datos para perfiles junior.</em>
 </p>
 
 <p align="center">
-  <img src="charts_phase4/viz8_salario_por_experiencia.png" width="900">
+  <img src="charts/viz8_tipo_contrato.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 2.1 Progresión salarial según experiencia.</em>
+  <em>Distribución por tipo de contrato en ofertas de datos.</em>
 </p>
 
+**Data Analyst es la mejor puerta de entrada.** El 38,5% de las ofertas para Data Analyst son accesibles para perfiles junior, frente al 22% para Data Scientist y el 18% para Data Engineer.
 
-### El mayor salto salarial ocurre entre Entry y Mid-Senior
-
-El incremento salarial estimado supera los 35.000 dólares anuales.
-
-### Implicación
-
-El valor económico del reskilling aparece principalmente al alcanzar niveles Mid-Senior.
-
-### Recomendación
-
-Comunicar el retorno económico del programa utilizando este tramo de progresión profesional.
+La primera colocación es significativamente más probable comenzando por Data Analyst, con una combinación equilibrada de accesibilidad y salario competitivo. Diseñar el itinerario inicial orientado a este rol maximiza la empleabilidad desde el primer mes de búsqueda.
 
 ---
 
-## ¿Qué skills enseñar?
-
-<!-- VALIDACIÓN MERCADO ESPAÑOL -->
+### ¿Qué salario esperar?
 
 <p align="center">
-  <img src="charts_phase4/viz3_1_skills_spain.png" width="1000">
+  <img src="charts/viz1.1_distribucion_salario.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 3. Top skills técnicas demandadas en España.</em>
+  <em>Distribución general de salarios en el mercado de datos.</em>
 </p>
 
-### El mercado español prioriza habilidades concretas
+<p align="center">
+  <img src="charts/viz10_salario_por_rol.png" width="900">
+</p>
 
-Top tecnologías identificadas:
+<p align="center">
+  <em>Comparativa salarial entre Data Analyst, Data Engineer y Data Scientist.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz9_salario_por_experiencia.png" width="900">
+</p>
+
+<p align="center">
+  <em>Progresión salarial según nivel de experiencia.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz2_boxplot_experiencia.png" width="900">
+</p>
+
+<p align="center">
+  <em>Boxplot de salarios por nivel de experiencia.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz1.2_qq_plots_escala_real.png" width="900">
+</p>
+
+<p align="center">
+  <em>Q-Q plots: comparativa distribución Normal vs Lognormal de salarios.</em>
+</p>
+
+**El mayor salto salarial ocurre entre Entry Level y Mid-Senior.** El incremento estimado supera los 35.000 dólares anuales, lo que convierte el reskilling en una inversión con retorno cuantificable a corto plazo.
+
+---
+
+### ¿Qué skills enseñar?
+
+<p align="center">
+  <img src="charts/viz4.1_hard_skills_global_vs_spain.png" width="1000">
+</p>
+
+<p align="center">
+  <em>Top hard skills demandadas: mercado global vs. España.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz4.2_most_demanded_skills_per_role.png" width="1000">
+</p>
+
+<p align="center">
+  <em>Habilidades más demandadas por rol: Data Analyst, Data Engineer y Data Scientist.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz7_heatmap_correlaciones.png" width="900">
+</p>
+
+<p align="center">
+  <em>Heatmap de correlaciones entre variables del dataset.</em>
+</p>
+
+**El mercado español prioriza habilidades concretas.** Top tecnologías identificadas:
 
 1. Cloud Computing
 2. Java
@@ -204,31 +290,26 @@ Top tecnologías identificadas:
 9. Docker
 10. Artificial Intelligence
 
-### Implicación
-
-Las empresas demandan perfiles capaces de combinar programación, cloud y buenas prácticas de desarrollo.
-
-### Recomendación
-
-Construir el currículo sobre:
-
-* Cloud
-* Python
-* Git
-* Azure / AWS
-* Metodologías ágiles
-* Comunicación de datos
+Las empresas demandan perfiles capaces de combinar programación, cloud y buenas prácticas de desarrollo. El currículo debe construirse sobre Python, Git, Azure/AWS y metodologías de trabajo en equipo.
 
 ---
 
-## ¿Qué industrias contratar?
+### ¿Qué industrias concentran las oportunidades?
 
 <p align="center">
-  <img src="charts_phase4/viz3_skills_global_vs_spain.png" width="900">
+  <img src="charts/viz3_business_units_global_vs_spain.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 4. Distribución de oportunidades por industria.</em>
+  <em>Distribución de unidades de negocio: mercado global vs. España.</em>
+</p>
+
+<p align="center">
+  <img src="charts/viz5_top_industrias.png" width="900">
+</p>
+
+<p align="center">
+  <em>Top industrias por volumen de ofertas de empleo en datos.</em>
 </p>
 
 Aunque IT Services lidera el volumen de contratación, existen oportunidades relevantes en:
@@ -238,140 +319,127 @@ Aunque IT Services lidera el volumen de contratación, existen oportunidades rel
 * Manufacturing
 * Defense
 
-### Implicación
-
-La especialización sectorial puede convertirse en una ventaja competitiva.
-
-### Recomendación
-
-Crear itinerarios específicos por industria.
+La especialización sectorial puede convertirse en una ventaja competitiva frente a otros candidatos con perfil exclusivamente técnico.
 
 ---
 
-## Competencia del Mercado
+### Competencia del mercado
 
 <p align="center">
-  <img src="charts_phase4/viz5_scatter_vistas_solicitudes.png" width="900">
+  <img src="charts/viz6_scatter_vistas_solicitudes.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 5. Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
+  <em>Relación entre visualizaciones y solicitudes en ofertas de empleo de datos.</em>
 </p>
-Solo el 39% de las ofertas muestran solicitudes reales.
 
-Sin embargo, la correlación entre vistas y solicitudes alcanza:
-
-**r = 0,72**
-
-### Implicación
-
-Las vistas pueden utilizarse como indicador universal de competitividad.
-
-### Recomendación
-
-Desarrollar servicios de inteligencia laboral basados en la dificultad estimada de cada oferta.
+Solo el 39% de las ofertas muestran solicitudes reales. Sin embargo, la correlación entre vistas y solicitudes alcanza **r = 0,72**, lo que permite usar las visualizaciones como indicador universal de la competitividad de una oferta incluso cuando faltan datos de aplicaciones.
 
 ---
 
-# Sesgos y Limitaciones
-
-El análisis identifica ocho sesgos principales.
-
-<!-- FASE 4 - VISTAS VS SOLICITUDES -->
-
-<!-- INTRODUCCIÓN SESGOS -->
+### ROI del Reskilling
 
 <p align="center">
-  <img src="charts_phase4/viz_intro_sesgo.png" width="1000">
+  <img src="charts/viz12_roi_reskilling.png" width="900">
 </p>
 
 <p align="center">
-  <em>Figura 6. Principales sesgos detectados en el dataset.</em>
+  <em>Retorno económico estimado de un programa de reskilling en datos.</em>
 </p>
 
-## 1. Sesgo MNAR Salarial
+**El reskilling se amortiza en menos de un año.** La progresión salarial proyectada para un perfil que completa el programa y accede al mercado como Data Analyst permite recuperar la inversión formativa en un periodo inferior a doce meses.
+
+---
+
+## ⚠️ Sesgos y Limitaciones
+
+<details>
+<summary>Ver los 8 sesgos identificados</summary>
+
+<p align="center">
+  <img src="charts/viz_intro_sesgo.png" width="1000">
+</p>
+
+<p align="center">
+  <em>Principales sesgos detectados en el dataset.</em>
+</p>
+
+### 1. Sesgo MNAR Salarial
 
 * 68% de las ofertas no publican salario.
 * Los salarios observados pueden estar sobreestimados.
 
-## 2. Sesgo Geográfico
+### 2. Sesgo Geográfico
 
 * 87% de las ofertas proceden de Estados Unidos.
 * Los salarios no son directamente extrapolables a España.
 
-## 3. Sesgo de Selección
+### 3. Sesgo de Selección
 
 * Predominio de grandes empresas con marca empleadora.
 
-## 4. Ausencia de Variables Demográficas
+### 4. Ausencia de Variables Demográficas
 
 * No es posible analizar diferencias por género.
 
-## 5. Sesgo Temporal
+### 5. Sesgo Temporal
 
 * Datos concentrados en 2024.
 
-## 6. Agregación de Skills
+### 6. Agregación de Skills
 
 * Las categorías pueden ocultar tecnologías específicas.
 
-## 7. Sesgo de Supervivencia
+### 7. Sesgo de Supervivencia
 
 * No existen datos fiables de cierre de ofertas.
 
-## 8. Solicitudes Subestimadas
+### 8. Solicitudes Subestimadas
 
 * Solo una parte de las vacantes muestra aplicaciones reales.
 
 ### Conclusión
 
-Los sesgos no invalidan el análisis.
+Los sesgos no invalidan el análisis. Su identificación permite interpretar correctamente los resultados y evitar decisiones erróneas.
 
-Su identificación permite interpretar correctamente los resultados y evitar decisiones erróneas.
+</details>
 
 ---
 
-# Recomendaciones Estratégicas
+## 🎯 Recomendaciones Estratégicas
 
-## 1. Priorizar Data Analyst como puerta de entrada
+<details>
+<summary>1. Priorizar Data Analyst como puerta de entrada</summary>
 
 Los resultados muestran que Data Analyst es el rol con mayor accesibilidad para perfiles junior, ofreciendo una combinación equilibrada entre oportunidades de contratación y potencial salarial.
 
-### Acción propuesta
+**Acción propuesta:** Diseñar el itinerario inicial del programa orientado a Data Analyst, maximizando la empleabilidad de los alumnos durante sus primeros meses de búsqueda laboral.
 
-Diseñar el itinerario inicial del programa orientado a Data Analyst, maximizando la empleabilidad de los alumnos durante sus primeros meses de búsqueda laboral.
+**Beneficio esperado:** Mayor tasa de inserción laboral y reducción del tiempo necesario para acceder al primer empleo en el sector de datos.
 
-### Beneficio esperado
+</details>
 
-Mayor tasa de inserción laboral y reducción del tiempo necesario para acceder al primer empleo en el sector de datos.
-
----
-
-## 2. Diseñar itinerarios progresivos hacia Data Engineer y Data Scientist
+<details>
+<summary>2. Diseñar itinerarios progresivos hacia Data Engineer y Data Scientist</summary>
 
 Aunque Data Analyst representa la mejor puerta de entrada, los roles de Data Engineer y Data Scientist presentan salarios superiores y mayores oportunidades de especialización.
 
-### Acción propuesta
-
-Crear rutas formativas escalonadas:
+**Acción propuesta:** Crear rutas formativas escalonadas:
 
 Data Analyst → Data Engineer → Data Scientist
 
 permitiendo que los alumnos continúen desarrollando sus competencias una vez obtengan experiencia profesional.
 
-### Beneficio esperado
+**Beneficio esperado:** Mayor crecimiento salarial a medio plazo y mejora de la retención de alumnos mediante formación continua.
 
-Mayor crecimiento salarial a medio plazo y mejora de la retención de alumnos mediante formación continua.
+</details>
 
----
-
-## 3. Construir el currículo sobre Cloud, Python y tecnologías cloud
+<details>
+<summary>3. Construir el currículo sobre Cloud, Python y buenas prácticas de desarrollo</summary>
 
 La validación realizada con fuentes españolas confirma que Cloud Computing, Python, Azure, AWS y Git se encuentran entre las habilidades más demandadas por las empresas.
 
-### Acción propuesta
-
-Actualizar el contenido formativo priorizando:
+**Acción propuesta:** Actualizar el contenido formativo priorizando:
 
 * Python
 * Git y control de versiones
@@ -381,38 +449,32 @@ Actualizar el contenido formativo priorizando:
 * Docker
 * Buenas prácticas de desarrollo
 
-### Beneficio esperado
+**Beneficio esperado:** Mayor alineación entre la formación impartida y las necesidades reales del mercado laboral.
 
-Mayor alineación entre la formación impartida y las necesidades reales del mercado laboral.
+</details>
 
----
-
-## 4. Incorporar módulos de negocio y comunicación
+<details>
+<summary>4. Incorporar módulos de negocio y comunicación</summary>
 
 Las organizaciones no buscan únicamente perfiles técnicos. Los profesionales de datos deben ser capaces de comunicar resultados, interpretar necesidades de negocio y apoyar la toma de decisiones.
 
-### Acción propuesta
-
-Incluir formación en:
+**Acción propuesta:** Incluir formación en:
 
 * Storytelling con datos
 * Presentaciones ejecutivas
 * Comunicación de insights
 * Pensamiento analítico orientado al negocio
 
-### Beneficio esperado
+**Beneficio esperado:** Profesionales más completos y con mayor capacidad para generar impacto dentro de las organizaciones.
 
-Profesionales más completos y con mayor capacidad para generar impacto dentro de las organizaciones.
+</details>
 
----
-
-## 5. Crear especializaciones sectoriales
+<details>
+<summary>5. Crear especializaciones sectoriales</summary>
 
 El análisis muestra oportunidades relevantes en sectores como Healthcare, Finance, Manufacturing y Defense, además del sector tecnológico.
 
-### Acción propuesta
-
-Desarrollar módulos optativos o itinerarios especializados por industria.
+**Acción propuesta:** Desarrollar módulos optativos o itinerarios especializados por industria.
 
 Ejemplos:
 
@@ -420,33 +482,27 @@ Ejemplos:
 * Data Analytics para Finanzas
 * Business Intelligence Industrial
 
-### Beneficio esperado
+**Beneficio esperado:** Diferenciación competitiva frente a otros programas formativos y mejor adaptación a distintos perfiles de alumnos.
 
-Diferenciación competitiva frente a otros programas formativos y mejor adaptación a distintos perfiles de alumnos.
+</details>
 
----
-
-## 6. Utilizar métricas de competitividad basadas en visualizaciones
+<details>
+<summary>6. Utilizar métricas de competitividad basadas en visualizaciones</summary>
 
 La correlación observada entre visualizaciones y solicitudes permite utilizar las visualizaciones como indicador indirecto de competencia cuando no existen datos completos de aplicaciones.
 
-### Acción propuesta
+**Acción propuesta:** Incorporar indicadores de competitividad en futuros análisis y herramientas de orientación laboral.
 
-Incorporar indicadores de competitividad en futuros análisis y herramientas de orientación laboral.
+**Beneficio esperado:** Mejor comprensión del nivel de competencia existente en cada tipo de oferta y apoyo más efectivo a los candidatos durante su búsqueda de empleo.
 
-### Beneficio esperado
+</details>
 
-Mejor comprensión del nivel de competencia existente en cada tipo de oferta y apoyo más efectivo a los candidatos durante su búsqueda de empleo.
-
----
-
-## 7. Complementar el análisis con fuentes específicas del mercado español
+<details>
+<summary>7. Complementar el análisis con fuentes específicas del mercado español</summary>
 
 El dataset principal presenta un fuerte sesgo geográfico hacia Estados Unidos. Aunque se realizó una validación complementaria, futuras decisiones deberían apoyarse en más fuentes locales.
 
-### Acción propuesta
-
-Integrar periódicamente información procedente de:
+**Acción propuesta:** Integrar periódicamente información procedente de:
 
 * InfoJobs
 * Tecnoempleo
@@ -454,84 +510,80 @@ Integrar periódicamente información procedente de:
 * Fundación Telefónica
 * Observatorios de empleo tecnológico
 
-### Beneficio esperado
+**Beneficio esperado:** Mayor precisión en la identificación de tendencias y una mejor adaptación de los programas a la realidad del mercado español.
 
-Mayor precisión en la identificación de tendencias y una mejor adaptación de los programas a la realidad del mercado español.
-omplementar el análisis con fuentes específicas del mercado español.
+</details>
 
 ---
 
-# Equipo
-
-Este proyecto ha sido desarrollado de forma colaborativa siguiendo una metodología ágil, combinando análisis de datos, visualización, investigación de mercado y validación de resultados.
-
-| Miembro | Rol |
-
-
-| Miembro | Rol |
-|----------|----------|
-| [MajoRodri](https://github.com/MajoRodri) | Data Analyst & Developer |
-| [MariaIsaDurango](https://github.com/MariaIsaDurango) | Data Analyst & Developer |
-| [SiR0N](https://github.com/SiR0N) | Data Analyst & Developer |
-| [JCRbit](https://github.com/JCRbit) | Scrum Master & Developer |
-| [adryeli](https://github.com/adryeli) | Product Owner & Developer |
-
-## Principio de Reproducibilidad
-
-Uno de los principios fundamentales de la ciencia de datos es la reproducibilidad.
+## 🛠️ Instalación
 
 Todos los resultados, gráficos y conclusiones presentados en este proyecto pueden regenerarse a partir de los datos y el código incluidos en este repositorio.
 
+> ⚠️ **Dataset requerido** — Los notebooks necesitan el dataset de LinkedIn Job Postings. No está incluido en este repositorio por restricciones de tamaño. Descárgalo antes de ejecutar cualquier notebook.
+>
+> **Opción 1 — Descarga directa desde Kaggle:**
+> [linkedin-job-postings en Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
+>
+> **Opción 2 — Descarga por código con `kagglehub`:**
+> ```python
+> import kagglehub
+>
+> # Download latest version
+> path = kagglehub.dataset_download("arshkon/linkedin-job-postings")
+>
+> print("Path to dataset files:", path)
+> ```
 
-# Reproducibilidad
+<details>
+<summary>Ver instrucciones de instalación y ejecución</summary>
 
-## Requisitos
+### Notebooks
+
+| Fase | Archivo |
+|------|---------|
+| Phase 1 — Exploración inicial | `notebooks/Phase1_Initial_Exploration.ipynb` |
+| Phase 2 — Limpieza y transformación | `notebooks/Phase2_Data_Cleaning_Preparation.ipynb` |
+| Phase 3 — Análisis exploratorio (EDA) | `notebooks/Phase3_Statistical_Bias_Analysis.ipynb` |
+| Phase 3.1 — Evaluación de sesgos | `notebooks/Phase3_1_Bias_Report.ipynb` |
+| Phase 4 — Visualizaciones | `notebooks/Phase4_Visualization.ipynb` |
+
+### Requisitos
 
 - Python 3.12+
 - Git
 - Jupyter, VsCode o Google Colab (Notebook)
 
-
----
-
-## Clonar el repositorio
+### Clonar el repositorio
 
 ```bash
 git clone https://github.com/MajoRodri/HRIA.git
 cd HRIA
 ```
 
----
+### Crear un entorno virtual
 
-## Crear un entorno virtual
-
-### Windows
+**Windows**
 
 ```bash
 python -m venv venv
 venv\Scripts\activate
 ```
 
-### Linux / macOS
+**Linux / macOS**
 
 ```bash
 python -m venv venv
 source venv/bin/activate
 ```
 
----
-
-## Instalar dependencias
+### Instalar dependencias
 
 ```bash
 pip install -r requirements.txt
 ```
 
----
-
-## Ejecutar los notebooks
-
-Abrir Jupyter Notebook (o VsCode/Google Colab):
+### Ejecutar los notebooks
 
 ```bash
 jupyter notebook
@@ -543,20 +595,27 @@ o
 jupyter lab
 ```
 
-Los notebooks contienen:
-
-- Exploración inicial de datos (Phase 1)
-- Limpieza y transformación (Phase 2)
-- Análisis exploratorio (EDA) (Phase 3)
-- Evaluación de sesgos (Phase 3.1)
-- Visualizaciones (Phase 4)
-
-
-## Consideraciones
+### Consideraciones
 
 - Algunos resultados dependen de fuentes externas que pueden actualizarse con el tiempo.
 - Los análisis reproducen el estado de los datos utilizados durante el desarrollo del proyecto.
 - Las conclusiones deben interpretarse teniendo en cuenta los sesgos y limitaciones documentados en este informe.
+
+</details>
+
+---
+
+## 👥 Equipo
+
+Este proyecto ha sido desarrollado de forma colaborativa siguiendo una metodología ágil, combinando análisis de datos, visualización, investigación de mercado y validación de resultados.
+
+| Miembro | Rol |
+|----------|----------|
+| [MajoRodri](https://github.com/MajoRodri) | Data Analyst & Developer |
+| [MariaIsaDurango](https://github.com/MariaIsaDurango) | Data Analyst & Developer |
+| [SiR0N](https://github.com/SiR0N) | Data Analyst & Developer |
+| [JCRbit](https://github.com/JCRbit) | Scrum Master & Developer |
+| [adryeli](https://github.com/adryeli) | Product Owner & Developer |
 
 ---
 
