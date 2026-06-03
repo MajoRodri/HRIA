@@ -14,9 +14,11 @@ Analizamos **19.725 ofertas de empleo** del mercado de datos y tecnología, comp
 
 [![Ver presentación en YouTube](https://img.youtube.com/vi/570OBE56TkA/0.jpg)](https://youtu.be/570OBE56TkA?si=0yoKYaZ46YlkC2RI)
 
-Aplicación interactiva: [github.com/adryeli/hria_streamlit](https://github.com/adryeli/hria_streamlit)
+Aplicación interactiva: [hria-dts.streamlit.app](https://hria-dts.streamlit.app/) — [github.com/adryeli/hria_streamlit](https://github.com/adryeli/hria_streamlit)
 
 Informe de sesgos interactivo (Plotly): [Phase 3.1 — Bias Report](https://majorodri.github.io/HRIA/notebooks/Phase3_1_Bias_Report.html)
+
+Documentación: [mintlify.wiki/MajoRodri/HRIA](https://mintlify.wiki/MajoRodri/HRIA)
 
 ---
 
@@ -89,7 +91,7 @@ Para ello era necesario comprender:
 
 Para validar los resultados en el contexto español se incorporaron:
 
-* Fundación Telefónica / OrientaHub (Infojobs, Tecnoempleo, etc)
+* [Mapa del Empleo — Fundación Telefónica](https://mapadelempleo.fundaciontelefonica.com/en/) (Infojobs, Tecnoempleo, etc)
 
 ### Periodo analizado
 
@@ -113,6 +115,10 @@ HRIA/
 │   ├── Phase3_Statistical_Bias_Analysis.ipynb
 │   ├── Phase3_1_Bias_Report.ipynb
 │   └── Phase4_Visualization.ipynb
+├── data/
+│   ├── raw/
+│   │   └── skills_spain.csv
+│   └── processed/
 ├── charts/
 │   ├── viz1.1_distribucion_salario.png
 │   ├── viz1.2_qq_plots_escala_real.png
@@ -134,6 +140,7 @@ HRIA/
 │       ├── logos/
 │       │   └── logo_hria.png
 │       └── skills_logos/
+├── init.py
 ├── requirements.txt
 └── README.md
 ```
@@ -522,20 +529,10 @@ El dataset principal presenta un fuerte sesgo geográfico hacia Estados Unidos. 
 
 Todos los resultados, gráficos y conclusiones presentados en este proyecto pueden regenerarse a partir de los datos y el código incluidos en este repositorio.
 
-> ⚠️ **Dataset requerido** — Los notebooks necesitan el dataset de LinkedIn Job Postings. No está incluido en este repositorio por restricciones de tamaño. Descárgalo antes de ejecutar cualquier notebook.
+> ⚠️ **Dataset requerido** — Los notebooks necesitan el dataset de LinkedIn Job Postings. No está incluido en este repositorio por restricciones de tamaño. Ejecuta `init.py` después de clonar el repositorio para configurar la estructura de carpetas y descargar el dataset automáticamente.
 >
-> **Opción 1 — Descarga directa desde Kaggle:**
+> **Descarga manual (alternativa):**
 > [linkedin-job-postings en Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
->
-> **Opción 2 — Descarga por código con `kagglehub`:**
-> ```python
-> import kagglehub
->
-> # Download latest version
-> path = kagglehub.dataset_download("arshkon/linkedin-job-postings")
->
-> print("Path to dataset files:", path)
-> ```
 
 <details>
 <summary>Ver instrucciones de instalación y ejecución</summary>
@@ -548,7 +545,7 @@ Todos los resultados, gráficos y conclusiones presentados en este proyecto pued
 | Phase 2 — Limpieza y transformación | `notebooks/Phase2_Data_Cleaning_Preparation.ipynb` |
 | Phase 3 — Análisis exploratorio (EDA) | `notebooks/Phase3_Statistical_Bias_Analysis.ipynb` |
 | Phase 3.1 — Evaluación de sesgos | `notebooks/Phase3_1_Bias_Report.ipynb` |
-| Phase 4 — Visualizaciones | `notebooks/Phase4_Visualization.ipynb` |
+| Phase 4 — Visualizaciones | `notebooks/Phase4_Visualization.ipynb` — requiere `data/raw/skills_spain.csv` (incluido en el repo) |
 
 ### Requisitos
 
@@ -583,6 +580,12 @@ source venv/bin/activate
 
 ```bash
 pip install -r requirements.txt
+```
+
+### Configurar el proyecto y descargar el dataset
+
+```bash
+python init.py
 ```
 
 ### Ejecutar los notebooks
