@@ -1,7 +1,13 @@
 # === DATA ===
-data/raw/
-data/processed/
-data/external/
+*.csv
+*.xlsx
+*.zip
+
+# 3. FORZAR LA SUBIDA DE ESTE CSV ESPECÍFICO EN RAW
+!data/raw/skills_spain.csv
+
+# 2. Prevent Git from ignoring .gitkeep files (ensures empty data folders are kept)
+!.gitkeep
 
 # === NOTEBOOK CHECKPOINTS ===
 **/.ipynb_checkpoints/
