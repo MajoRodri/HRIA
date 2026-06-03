@@ -1,4 +1,5 @@
 # === DATA ===
+*:Zone.Identifier
 *.csv
 *.xlsx
 *.zip
