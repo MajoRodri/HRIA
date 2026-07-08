@@ -534,6 +534,9 @@ Todos los resultados, gráficos y conclusiones presentados en este proyecto pued
 > **Descarga manual (alternativa):**
 > [linkedin-job-postings en Kaggle](https://www.kaggle.com/datasets/arshkon/linkedin-job-postings)
 
+>**Google Colab — datos ya organizados:**
+> [Carpeta de Drive con estructura lista](https://drive.google.com/drive/folders/16enhy3GhMqzyVyc5RIambvn8GB8ilzUI?usp=sharing) — contiene `data/raw/` y `data/processed/` listos para usar directamente en Colab.
+
 <details>
 <summary>Ver instrucciones de instalación y ejecución</summary>
 
